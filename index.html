@@ -4,6 +4,28 @@
   </head>
   <body>
     <script>
+      function allTrue(values){
+        for(let i = 0; i < values.length; i++){
+          if(values[i] !== true){
+            return false;
+          }
+         /*
+          if(values[i] === true){
+
+          }
+          else {
+            return false;
+          }
+          */
+        }
+        return true;
+      }
+
+      console.log(allTrue([true, true]));//true
+      console.log(allTrue([true, 'hello']));//false
+      console.log(allTrue([]));//true
+      console.log(allTrue([false, true, true, true, true, true, true]));//false
+      /*
       console.log('hello world');
       const board = [
         ['x', 'o', 'x'],
@@ -17,6 +39,7 @@
           console.log(board[i][j]);
         }
       }
+      */
     </script>
   </body>
 </html>
